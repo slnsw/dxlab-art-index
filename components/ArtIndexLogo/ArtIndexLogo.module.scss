@@ -1,0 +1,13 @@
+@import '../../styles/global.scss';
+
+.artIndexLogo {
+  display: block;
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: -0.05em;
+    font-weight: 400;
+    font-size: var(--font-size-lg);
+    line-height: 1;
+  }
+}

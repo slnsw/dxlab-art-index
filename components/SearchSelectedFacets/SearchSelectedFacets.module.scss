@@ -1,0 +1,20 @@
+@import '../../styles/global.scss';
+
+.searchSelectedFacets {
+  display: block;
+}
+
+.facet {
+  margin-right: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-primary);
+  border-color: var(--colour-grey-darkest);
+  // border: none;
+}
+
+.facetName {
+  margin-right: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  // transform: translateY(-0.1em);
+}

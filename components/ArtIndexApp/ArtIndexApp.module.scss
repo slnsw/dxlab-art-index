@@ -1,0 +1,171 @@
+@import '../../styles/global.scss';
+
+.artIndexApp {
+  display: flex;
+  flex-direction: column;
+
+  @include media-sm {
+    min-height: calc(100vh - 4rem);
+  }
+
+  h1 {
+    font-family: var(--font-primary);
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  --font-art-index: 'Literata', serif;
+  --border-primary: 4px solid var(--colour-grey-darkest);
+  --colour-art-index-male: var(--colour-orange);
+  --colour-art-index-female: var(--colour-hyper-green);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  // border-bottom: 1px solid var(--colour-grey-darkest);
+
+  @include media-sm {
+    margin-top: 0;
+    padding-bottom: 2rem;
+  }
+
+  h1 {
+    font-size: var(--font-size-md);
+    font-family: var(--font-art-index);
+
+    @include media-sm {
+      font-size: var(--font-size-lg);
+    }
+  }
+}
+
+.headerLogos {
+  display: flex;
+  align-items: flex-end;
+}
+
+.logoDivider {
+  height: var(--spacing-xxs);
+  margin-top: auto;
+  margin-right: var(--spacing-sm);
+  margin-left: var(--spacing-sm);
+  border-left: 1px solid var(--colour-white);
+}
+
+.dxLogo {
+  height: 1em;
+
+  @include media-sm {
+    height: 1.3em;
+  }
+}
+
+.slLogo {
+  display: none;
+  height: 1.3em;
+  margin-left: 4.5em;
+
+  @include media-sm {
+    display: block;
+  }
+}
+
+.menu {
+  flex: 1;
+  justify-content: center;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  font-size: var(--font-size-xlg);
+  line-height: 1;
+  text-align: center;
+  list-style-type: none;
+
+  @include media-sm {
+    display: flex;
+    font-size: var(--font-size-sm);
+    text-align: left;
+  }
+
+  li {
+    @extend .font-uppercase;
+
+    border-top: var(--border-primary);
+
+    @include media-sm {
+      margin-right: var(--spacing-lg);
+      border-top: initial;
+    }
+
+    a {
+      display: block;
+      padding: var(--spacing-md) 0;
+      color: var(--colour-white);
+
+      @include media-sm {
+        padding: 0;
+      }
+    }
+  }
+
+  li:last-child {
+    margin-right: 0;
+    border-bottom: var(--border-primary);
+
+    @include media-sm {
+      border-bottom: initial;
+    }
+  }
+}
+
+li.menuItemActive {
+  font-weight: 500;
+
+  a {
+    color: var(--colour-primary);
+  }
+}
+
+.menuButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+
+  @include media-sm {
+    display: none;
+  }
+}
+
+.menuButtonOpen {
+  position: fixed;
+}
+
+.headerNav {
+  z-index: 10;
+
+  @include media-sm {
+    flex: 1;
+    width: initial;
+    min-height: initial;
+    overflow: initial;
+  }
+
+  .insideHeaderNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media-sm {
+      position: relative;
+    }
+  }
+}

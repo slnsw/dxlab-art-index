@@ -1,0 +1,50 @@
+@import '../../styles/global.scss';
+
+.paginate {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+
+.page {
+  margin: 0 var(--spacing-xxs);
+}
+
+.pageLink {
+  padding: var(--spacing-xxs);
+  border: 1px solid var(--colour-grey-darkest);
+  cursor: pointer;
+
+  &:link,
+  &:visited {
+    color: var(--colour-white);
+  }
+
+  &:hover {
+    color: var(--colour-primary);
+    text-decoration: none;
+  }
+}
+
+.previous,
+.next {
+  font-size: var(--font-size-sm);
+}
+
+.previousLink,
+.nextLink {
+  padding: var(--spacing-xxs);
+  cursor: pointer;
+}
+
+.previous {
+  margin-right: var(--spacing-xxs);
+}
+
+.next {
+  margin-left: var(--spacing-xxs);
+}
+
+.activeLink {
+  border: 1px solid var(--colour-primary);
+}

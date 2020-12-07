@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from './ArtIndexStatisticBlock';","map":{"version":3,"sources":["/Users/luked/Documents/slnsw/dxlab-art-index/components/ArtIndexStatisticBlock/index.ts"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,0BAAxB","sourcesContent":["export { default } from './ArtIndexStatisticBlock';\n"]},"metadata":{},"sourceType":"module"}

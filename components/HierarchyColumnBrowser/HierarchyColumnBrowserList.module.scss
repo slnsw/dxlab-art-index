@@ -1,0 +1,37 @@
+@import '../../styles/global.scss';
+
+$baseline: 1rem;
+$baseline-3: 3rem;
+
+.hierarchyBrowserList {
+  height: calc(100% - 2.5em);
+}
+
+.listInfo {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: $baseline;
+  // font-size: $font-size-sm;
+  font-family: var(--font-primary);
+  // background-color: var(--colour-white);
+  border-top: 1px solid var(--colour-grey-darkest);
+}
+
+.listInfoLevel {
+  // color: $colour-grey-700;
+  font-weight: 500;
+}
+
+.row {
+  // @include line-clamp(3);
+
+  padding: $baseline;
+}
+
+.rowSelected {
+  font-weight: bold;
+}

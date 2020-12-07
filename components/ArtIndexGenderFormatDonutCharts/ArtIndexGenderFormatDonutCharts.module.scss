@@ -1,0 +1,21 @@
+@import '../../styles/global.scss';
+
+.ArtIndexGenderFormatDonutCharts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.formatDonut {
+  flex-basis: 120px;
+  margin: var(--spacing-xs);
+
+  @include media-sm {
+    margin: var(--spacing-sm);
+  }
+}
+
+.donutLabel {
+  margin-bottom: 0;
+  text-align: center;
+}

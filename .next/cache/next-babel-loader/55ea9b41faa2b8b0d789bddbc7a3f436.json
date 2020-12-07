@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from './SocialMetaHead';","map":{"version":3,"sources":["/Users/luked/Documents/slnsw/dxlab-art-index/components/SocialMetaHead/index.ts"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,kBAAxB","sourcesContent":["export { default } from './SocialMetaHead';\n"]},"metadata":{},"sourceType":"module"}

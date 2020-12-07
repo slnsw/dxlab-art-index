@@ -1,0 +1,30 @@
+@import '../../styles/global.scss';
+
+// .genderRangeDonutChart {
+//   display: block;
+// }
+
+.fullGenderDonutChart {
+  margin-bottom: var(--spacing-xxxxlg);
+}
+
+.rangeHolder {
+  margin-right: var(--spacing-xlg);
+  margin-left: var(--spacing-xlg);
+
+  @include media-sm {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.thumbIcon {
+  // Adjust stoopid Icon vertical alignment
+  margin-top: -0.15em;
+  margin-right: -0.1em;
+  opacity: 0.8;
+}
+
+.forwardThumbIcon {
+  margin-left: -0.1em;
+}

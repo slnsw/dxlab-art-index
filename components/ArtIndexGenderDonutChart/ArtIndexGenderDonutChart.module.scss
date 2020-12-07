@@ -1,0 +1,54 @@
+@import '../../styles/global.scss';
+
+.genderDonutChart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.donutChart {
+  width: 100px;
+  margin-right: var(--spacing-lg);
+  margin-left: var(--spacing-lg);
+
+  @include media-sm {
+    margin-right: var(--spacing-md);
+    margin-left: var(--spacing-md);
+  }
+}
+
+.legend {
+  display: grid;
+  grid-template-areas:
+    'legendCount legendCount'
+    'legendColour legendName';
+  grid-template-columns: 1rem auto;
+  gap: var(--spacing-xxs);
+  align-items: center;
+
+  @include media-sm {
+    display: flex;
+    gap: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.legendColour {
+  grid-area: legendColour;
+}
+
+.legendName {
+  grid-area: legendName;
+
+  @include media-sm {
+    margin-right: var(--spacing-xxs);
+  }
+}
+
+.legendCount {
+  grid-area: legendCount;
+}

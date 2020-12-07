@@ -1,0 +1,16 @@
+@import '../../styles/global.scss';
+
+.bubbleChart {
+  @extend .font-uppercase;
+
+  display: block;
+  width: 100%;
+  text-anchor: middle;
+  // font-weight: 600;
+  font-size: var(--spacing-sm);
+  font-family: var(--font-secondary);
+
+  text {
+    pointer-events: none;
+  }
+}

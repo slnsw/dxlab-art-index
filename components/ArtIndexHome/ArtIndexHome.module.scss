@@ -1,0 +1,195 @@
+@import '../../styles/global.scss';
+
+.artIndexHome {
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(70ch, 100%)
+    1fr;
+  margin: 0 auto;
+
+  h1 {
+    margin-bottom: var(--spacing-xlg);
+    font-weight: 400;
+    font-size: var(--font-size-xxlg);
+    font-family: var(--font-art-index);
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: none;
+
+    @include media-sm {
+      font-size: var(--font-size-xxxlg);
+    }
+  }
+
+  h2 {
+    margin-top: var(--spacing-xlg);
+    margin-bottom: var(--spacing-xlg);
+    font-weight: 400;
+    font-size: var(--font-size-xlg);
+    font-family: var(--font-art-index);
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: none;
+  }
+}
+
+.artIndexHome > * {
+  grid-column: 2;
+}
+
+.fullBleed {
+  grid-column: 1 / 4;
+  width: 100%;
+}
+
+.paragraph {
+  position: relative;
+  z-index: 0;
+  margin-bottom: var(--spacing-xxlg);
+  color: var(--colour-grey-light);
+  font-size: var(--font-size-md);
+
+  strong {
+    color: var(--colour-grey-lightest);
+  }
+
+  @include media-sm {
+    font-size: var(--font-size-lg);
+  }
+}
+
+.artistList {
+  margin-bottom: var(--spacing-xxxlg);
+}
+
+.stats {
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-xxlg);
+
+  @include media-sm {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.stat {
+  max-width: 60%;
+  padding-left: 0;
+  text-align: left;
+  border-top: 1px solid var(--colour-grey-darkest);
+
+  @include media-sm {
+    border-bottom: 1px solid var(--colour-grey-darkest);
+  }
+
+  &:last-child {
+    border-bottom: 1px solid var(--colour-grey-darkest);
+  }
+}
+
+.genderFormatBubbleChart {
+  margin-bottom: 5rem;
+}
+
+.sectionMasthead {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% + 2rem);
+  height: 35rem;
+  margin-right: -1rem;
+  margin-bottom: 1rem;
+  margin-left: -1rem;
+  padding: 0 2rem;
+  text-align: center;
+  background-size: cover;
+  background-attachment: scroll;
+
+  @include media-sm {
+    width: calc(100% + 4rem);
+    height: 40rem;
+    margin-right: -2rem;
+    margin-bottom: 3rem;
+    margin-left: -2rem;
+    background-attachment: fixed;
+  }
+
+  h2 {
+    position: relative;
+    margin: 0 0 0.1em 0;
+    font-size: 20vw;
+    line-height: 1;
+    -webkit-text-stroke: 1px var(--colour-white);
+    -webkit-text-fill-color: transparent;
+
+    @include media-md {
+      font-size: 10vw;
+      -webkit-text-stroke: 1.5px var(--colour-white);
+    }
+  }
+
+  p {
+    position: relative;
+    font-weight: 500;
+    font-size: var(--spacing-lg);
+    font-family: var(--font-art-index);
+  }
+}
+
+.sectionMastheadOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--colour-black);
+  opacity: 0.2;
+}
+
+.worksByYearChart {
+  margin-bottom: var(--spacing-xxxlg);
+}
+
+.genderPriceChart {
+  margin-bottom: 4rem;
+}
+
+.genderRange {
+  margin-bottom: var(--spacing-md);
+}
+
+.genderBalance {
+  margin-bottom: var(--spacing-xxxlg);
+}
+
+.genderBalanceLegend {
+  margin-bottom: var(--spacing-md);
+}
+
+.methodology {
+  font-size: var(--spacing-md);
+
+  @include media-sm {
+    font-size: var(--spacing-sm);
+  }
+}
+
+.imageCredit {
+  position: absolute;
+  right: var(--spacing-sm);
+  bottom: var(--spacing-sm);
+  color: var(--colour-grey-lighter);
+  font-size: var(--spacing-sm);
+  line-height: 1;
+  // opacity: 80%;
+
+  &:link,
+  &:visited {
+    color: var(--colour-white);
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

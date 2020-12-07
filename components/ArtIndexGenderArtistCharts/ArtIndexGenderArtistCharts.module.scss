@@ -1,0 +1,37 @@
+@import '../../styles/global.scss';
+
+.genderCharts {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin-bottom: 3rem;
+  padding-top: var(--spacing-xxs);
+  padding-bottom: var(--spacing-lg);
+  background-color: var(--colour-black);
+}
+
+// Override base style
+.title:first-child {
+  margin-top: var(--spacing-xxs);
+  margin-bottom: var(--spacing-md);
+
+  @include media-sm {
+    margin-bottom: var(--spacing-lg);
+  }
+}
+
+.paragraph {
+  position: relative;
+  z-index: 0;
+  margin-bottom: var(--spacing-xxlg);
+  color: var(--colour-grey-light);
+  font-size: var(--font-size-md);
+
+  @include media-sm {
+    font-size: var(--font-size-lg);
+  }
+
+  strong {
+    color: var(--colour-grey-lightest);
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../styles/global.scss';
+
+.artIndexCtaButton {
+  padding-left: var(--spacing-sm);
+  font-family: var(--font-primary);
+
+  > span {
+    display: block;
+    transform: translateY(-0.1em);
+  }
+}

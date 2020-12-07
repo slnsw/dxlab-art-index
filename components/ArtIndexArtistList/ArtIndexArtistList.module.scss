@@ -1,0 +1,51 @@
+@import '../../styles/global.scss';
+
+.artIndexArtistList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  --image-diameter: 3rem;
+
+  @include media-sm {
+    --image-diameter: 6rem;
+  }
+}
+
+.artist {
+  flex-basis: var(--image-diameter);
+  height: var(--image-diameter);
+  margin: var(--spacing-xs);
+  overflow: hidden;
+  background-color: var(--colour-grey-darker);
+  border-radius: var(--image-diameter);
+
+  @include media-sm {
+    margin: var(--spacing-sm);
+  }
+}
+
+.artistImage {
+  width: var(--image-diameter);
+}
+
+.remainingArtistsCount {
+  display: flex;
+  flex-basis: var(--image-diameter);
+  align-items: center;
+  justify-content: center;
+  height: var(--image-diameter);
+  margin: var(--spacing-sm);
+  text-align: center;
+
+  p {
+    margin-bottom: 0;
+    color: var(--colour-grey);
+    line-height: 1;
+  }
+
+  span {
+    color: var(--colour-grey-lightest);
+    font-size: var(--font-size-xlg);
+  }
+}

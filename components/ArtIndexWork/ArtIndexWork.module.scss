@@ -1,0 +1,55 @@
+@import '../../styles/global.scss';
+
+.artIndexWork {
+  display: block;
+  max-width: var(--container-width-md);
+  margin: 0 auto;
+  padding-top: var(--spacing-md);
+  border-top: 4px solid var(--colour-grey-darkest);
+
+  h1 {
+    margin-top: 0;
+    font-weight: 400;
+    font-size: var(--font-size-xxxlg);
+    font-family: var(--font-art-index);
+    line-height: 1.2;
+  }
+}
+
+.label {
+  @extend .font-uppercase;
+
+  margin-bottom: var(--spacing-sm);
+  color: var(--colour-grey);
+  font-size: var(--font-size-sm);
+}
+
+.artistNameSection {
+  display: flex;
+  align-items: top;
+
+  .label {
+    margin-bottom: 0;
+  }
+}
+
+.artistName {
+  font-size: var(--font-size-lg);
+}
+
+.mediumFormat {
+  @extend .font-uppercase;
+
+  margin-bottom: 0;
+  color: var(--colour-grey);
+  font-size: var(--font-size-sm);
+}
+
+.workImage {
+  width: 100%;
+  padding-bottom: var(--spacing-xxlg);
+}
+
+.artistImageCircle {
+  margin-right: var(--spacing-md);
+}

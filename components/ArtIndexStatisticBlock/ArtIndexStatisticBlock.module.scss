@@ -1,0 +1,23 @@
+@import '../../styles/global.scss';
+
+.artIndexStatisticBlock {
+  display: block;
+  text-align: center;
+  padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-xlg)
+    var(--spacing-lg);
+}
+
+.count {
+  margin-bottom: 0.1em;
+  color: var(--colour-primary);
+  font-size: var(--font-size-xxxlg);
+  line-height: 1;
+}
+
+.label {
+  @extend .font-uppercase;
+
+  margin-right: -0.3em;
+  margin-bottom: 0;
+  font-size: var(--font-size-sm);
+}

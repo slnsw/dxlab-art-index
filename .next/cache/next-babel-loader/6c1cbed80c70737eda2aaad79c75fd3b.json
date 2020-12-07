@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from './ArtIndexGenderLegend';","map":{"version":3,"sources":["/Users/luked/Documents/slnsw/dxlab-art-index/components/ArtIndexGenderLegend/index.ts"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,wBAAxB","sourcesContent":["export { default } from './ArtIndexGenderLegend';\n"]},"metadata":{},"sourceType":"module"}

@@ -1,0 +1,26 @@
+@import '../../styles/global.scss';
+
+.artIndexArtistThumbnail {
+  display: block;
+  width: var(--thumbnail-width);
+  min-width: var(--thumbnail-width);
+  height: var(--thumbnail-width);
+  overflow: hidden;
+  background-color: var(--colour-grey-darker);
+  border-radius: 3rem;
+
+  --thumbnail-width: 6rem;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.sizeSm {
+  --thumbnail-width: 3rem;
+}
+
+.sizeXs {
+  --thumbnail-width: 1.5rem;
+}

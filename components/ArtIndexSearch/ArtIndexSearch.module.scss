@@ -1,0 +1,189 @@
+@import '../../styles/global.scss';
+
+.artIndexSearch {
+  max-width: var(--container-width-xlg);
+  margin: 0 auto;
+  padding-top: 1rem;
+
+  @include media-sm {
+    padding-top: 2rem;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-areas:
+    'searchBox'
+    'searchInfo'
+    'selectedFacets'
+    'results'
+    'paginate';
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  column-gap: var(--spacing-xxlg);
+
+  @include media-sm {
+    grid-template-areas:
+      'facets searchBox'
+      'facets searchInfo'
+      'facets selectedFacets'
+      'facets results'
+      'facets paginate';
+    grid-template-rows: auto auto auto 1fr;
+    grid-template-columns: 1fr 2fr;
+    column-gap: var(--spacing-xxlg);
+  }
+}
+
+.searchBox {
+  display: flex;
+  grid-area: searchBox;
+  align-items: normal;
+  margin-bottom: var(--spacing-md);
+}
+
+.searchInput {
+  flex: 1;
+  margin-right: var(--spacing-sm);
+  background-color: var(--colour-grey-darkest);
+
+  input[type='text'] {
+    border: none;
+  }
+}
+
+.searchButton {
+  height: auto;
+}
+
+.selectedFacets {
+  grid-area: selectedFacets;
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--colour-grey-darkest);
+
+  @include media-sm {
+    // margin-bottom: var(--spacing-md);
+    border-top: none;
+    border-bottom: 1px solid var(--colour-grey-darkest);
+  }
+}
+
+.searchInfo {
+  display: flex;
+  grid-area: searchInfo;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+
+  p {
+    @extend .font-uppercase;
+
+    margin-bottom: 0;
+    color: var(--colour-grey-lighter);
+    font-size: var(--font-size-sm);
+    // font-family: var(--font-secondary);
+    line-height: 1;
+  }
+}
+
+.facetsButton {
+  @include media-sm {
+    display: none;
+  }
+}
+
+.results {
+  position: relative;
+  grid-area: results;
+  height: min-content;
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-xxxlg);
+}
+
+.resultsList {
+  @include media-sm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+  }
+}
+
+.resultsListLoading {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.paginate {
+  grid-area: paginate;
+  height: min-content;
+  margin: 0 auto;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  background-color: var(--colour-black);
+}
+
+.facetSidebar {
+  grid-area: facets;
+}
+
+.facets {
+  padding: var(--spacing-md);
+  border-right: 4px solid var(--colour-grey-darkest);
+
+  @include media-sm {
+    padding: 0 var(--spacing-xxlg) 0 0;
+    border-right: 1px solid var(--colour-grey-darkest);
+  }
+
+  h2 {
+    margin-bottom: var(--spacing-lg);
+    color: var(--colour-grey);
+    font-weight: 400;
+    font-size: var(--font-size-sm);
+    font-family: var(--font-primary);
+  }
+}
+
+.artistFacets {
+  // display: flex;
+  // flex-wrap: wrap;
+  margin-right: calc(-1 * var(--spacing-lg));
+
+  p {
+    display: flex;
+    flex: 1 1 10em;
+    justify-content: space-between;
+    margin-right: var(--spacing-lg);
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-size-md);
+
+    a {
+      display: flex;
+      color: var(--colour-white);
+    }
+  }
+}
+
+.artistFacetThumbnail {
+  margin-right: var(--spacing-xxs);
+}
+
+.artistFacetValue {
+  margin-left: var(--spacing-xxs);
+  opacity: 0.3;
+}
+
+.artistsChart {
+  margin-bottom: var(--spacing-md);
+}
+
+.artistFacetGender {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: var(--spacing-xs);
+  background-color: var(--colour-grey-darker);
+  border-radius: var(--spacing-lg);
+}

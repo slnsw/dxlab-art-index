@@ -1,0 +1,12 @@
+@import '../../styles/global.scss';
+
+.artIndexFormatBubbleChart {
+  display: block;
+  font-family: var(--font-primary);
+  letter-spacing: 0;
+  text-transform: none;
+
+  circle {
+    cursor: pointer;
+  }
+}

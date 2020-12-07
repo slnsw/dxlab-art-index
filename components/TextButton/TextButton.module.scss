@@ -1,0 +1,10 @@
+@import '../../styles/global.scss';
+
+.textButton {
+  // display: block;
+  padding: 0;
+  color: var(--colour-primary);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-primary);
+  text-transform: none;
+}

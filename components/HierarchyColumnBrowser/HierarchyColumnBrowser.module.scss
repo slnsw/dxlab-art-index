@@ -1,0 +1,88 @@
+@import '../../styles/global.scss';
+
+$baseline-1: 1rem;
+$baseline-2: 2rem;
+$border: 1px solid var(--colour-grey-darkest);
+
+.hierarchyBrowser {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: calc(100vh - #{$baseline-1} * 13);
+  max-height: 46rem;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  border: $border;
+
+  // @include media-sm {
+  //   scroll-snap-type: none;
+  // }
+}
+
+.hierarchyBrowser .list {
+  position: relative;
+  flex: 1 0 auto;
+  width: 90%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; /* important for iOS */
+  scroll-snap-align: center;
+  border-right: $border; // moved here from :global(.ReactVirtualized__List) below so it shows while column is loading
+
+  @include media-sm {
+    scroll-snap-align: none;
+    max-width: 32%;
+  }
+
+  @include media-sm {
+    max-width: 64%;
+  }
+
+  @include media-md {
+    max-width: 48%;
+  }
+
+  @include media-lg {
+    scroll-snap-align: none;
+    max-width: 32%;
+  }
+
+  :global(.ReactVirtualized__List:focus) {
+    outline: none;
+  }
+}
+
+.hierarchyBrowser .thinList {
+  position: relative;
+  flex: 1 0 auto;
+  width: 90%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; /* important for iOS */
+  scroll-snap-align: center;
+  border-right: $border; // moved here from :global(.ReactVirtualized__List) below so it shows while column is loading
+
+  @include media-sm {
+    scroll-snap-align: none;
+    max-width: 16%;
+  }
+
+  @include media-sm {
+    max-width: 32%;
+  }
+
+  @include media-md {
+    max-width: 24%;
+  }
+
+  @include media-lg {
+    scroll-snap-align: none;
+    max-width: 16%;
+  }
+
+  :global(.ReactVirtualized__List:focus) {
+    outline: none;
+  }
+}
+
+// .loader {
+//   margin: $baseline-2;
+// }

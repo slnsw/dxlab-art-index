@@ -1,0 +1,301 @@
+@import '../../styles/global.scss';
+
+.artIndexArtist {
+  display: block;
+  max-width: var(--container-width-md);
+  margin: 0 auto;
+  padding-top: var(--spacing-md);
+  border-top: var(--border-primary);
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: var(--font-size-xxxlg);
+    font-family: var(--font-art-index);
+    line-height: 1.1;
+
+    @include media-sm {
+      font-size: var(--font-size-xxxxlg);
+    }
+  }
+
+  h2 {
+    margin-bottom: var(--spacing-lg);
+    color: var(--colour-grey);
+    font-weight: 400;
+    font-size: var(--font-size-sm);
+    font-family: var(--font-primary);
+  }
+
+  h3 {
+    font-weight: 400;
+    font-size: var(--font-size-lg);
+    font-family: var(--font-art-index);
+    letter-spacing: 0;
+    text-transform: none;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+
+  @include media-sm {
+    margin-bottom: var(--spacing-xxxlg);
+  }
+}
+
+.type {
+  @extend .font-uppercase;
+
+  margin-bottom: 0;
+  color: var(--colour-grey);
+  font-size: var(--font-size-sm);
+}
+
+.artistImageCircle {
+  margin-right: var(--spacing-md);
+}
+
+.content {
+  display: grid;
+  grid-template-areas:
+    'stats'
+    'gender'
+    'formats'
+    'worksByYear'
+    'exhibitions';
+  gap: var(--spacing-xxlg);
+
+  @include media-sm {
+    grid-template-areas:
+      'gender stats'
+      'formats stats'
+      'worksByYear stats'
+      'exhibitions exhibitions';
+    grid-template-columns: 1fr auto;
+    gap: var(--spacing-xxxlg);
+  }
+}
+
+.contentHasWiki {
+  grid-template-areas:
+    'stats'
+    'bio'
+    'gender'
+    'formats'
+    'worksByYear'
+    'exhibitions';
+
+  @include media-sm {
+    grid-template-areas:
+      'bio stats'
+      'gender stats'
+      'formats stats'
+      'worksByYear stats'
+      'exhibitions exhibitions';
+  }
+}
+
+.bio {
+  grid-area: bio;
+}
+
+.formats {
+  grid-area: formats;
+}
+
+.gender {
+  display: flex;
+  grid-area: gender;
+  align-items: center;
+
+  h2 {
+    margin-right: var(--spacing-lg);
+    margin-bottom: 0;
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    text-transform: capitalize;
+  }
+}
+
+.genderIndicator {
+  width: 1em;
+  height: 1em;
+  margin-right: var(--spacing-xxs);
+  background-color: var(--colour-grey-dark);
+  border-radius: 1em;
+}
+
+.worksByYear {
+  grid-area: worksByYear;
+}
+
+.stats {
+  display: flex;
+  grid-area: stats;
+  justify-content: space-around;
+  // margin-bottom: var(--spacing-md);
+  border-top: 1px solid var(--colour-grey-darkest);
+  border-bottom: 1px solid var(--colour-grey-darkest);
+
+  @include media-sm {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 16ch;
+    height: min-content;
+    border-top: none;
+    border-bottom: none;
+    border-left: 1px solid var(--colour-grey-darkest);
+  }
+}
+
+.exhibitions {
+  grid-area: exhibitions;
+}
+
+.timeline {
+  h3 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-xxs);
+    font-size: var(--font-size-lg);
+  }
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-xxs);
+    font-weight: 400;
+    font-size: var(--font-size-md);
+    font-family: var(--font-primary);
+    letter-spacing: 0;
+    text-transform: none;
+  }
+}
+
+.timelineYear {
+  display: flex;
+}
+
+.timelineYearLabel {
+  width: 5ch;
+  min-width: 5ch;
+  margin-bottom: 0;
+  font-size: var(--font-size-sm);
+}
+
+.timelineBullet {
+  width: var(--spacing-xxs);
+  height: var(--spacing-xxs);
+  margin-top: var(--spacing-xxxs);
+  margin-bottom: var(--spacing-xxxs);
+  background-color: var(--colour-white);
+  border-radius: var(--spacing-md);
+}
+
+.timelineDecoration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: var(--spacing-sm);
+}
+
+.timelineLine {
+  flex: 1;
+  width: 1px;
+  height: 10px;
+  border-left: 1px solid var(--colour-grey-darkest);
+}
+
+.timelineExhibition {
+  margin-top: -0.4em;
+  margin-bottom: var(--spacing-xlg);
+}
+
+.timelineWorks {
+  margin-left: var(--spacing-md);
+
+  a:link,
+  a:visited {
+    color: var(--colour-grey-lightest);
+  }
+}
+
+.timelineWorkFormat {
+  margin-left: var(--spacing-xs);
+  color: var(--colour-grey);
+  font-size: var(--font-size-sm);
+}
+
+.timelineShowMoreButton {
+  padding: 0;
+  color: var(--colour-primary);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-primary);
+  text-transform: none;
+}
+
+.occupation {
+  margin-bottom: 0;
+}
+
+.occupation::first-letter {
+  text-transform: uppercase;
+}
+
+.loader {
+  background-color: var(--colour-black);
+}
+
+.wikiImages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+
+  @include media-sm {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @include media-md {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.wikiImage {
+  img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+  }
+}
+
+.sourceText {
+  margin-bottom: 0;
+  color: var(--colour-grey-light);
+  font-size: var(--spacing-sm);
+}
+
+.artIndexArtist .wikidata {
+  margin-top: var(--spacing-xxlg);
+
+  h2 {
+    margin-bottom: var(--spacing-xxxs);
+    font-size: var(--spacing-md);
+  }
+
+  h3 {
+    @extend .font-uppercase;
+
+    margin-bottom: var(--spacing-lg);
+    color: var(--colour-grey);
+    font-weight: 400;
+    font-size: var(--font-size-sm);
+    font-family: var(--font-primary);
+  }
+}
