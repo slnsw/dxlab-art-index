@@ -1,3 +1,7 @@
+const HomePage = () => {
+  return null;
+};
+
 export const getServerSideProps = async ({ req, res }) => {
   if (res) {
     res.writeHead(302, {
@@ -7,3 +11,5 @@ export const getServerSideProps = async ({ req, res }) => {
     res.end();
   }
 };
+
+export default HomePage;
