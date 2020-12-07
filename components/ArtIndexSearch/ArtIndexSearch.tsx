@@ -49,9 +49,10 @@ const ArtIndexSearchPage = () => {
   const offset = parseInt(query.offset, 10);
 
   const [value, setValue] = React.useState('');
-  const [resultsData, setResultsData] = React.useState<
-    ArtIndexApiWorksResult
-  >();
+  const [
+    resultsData,
+    setResultsData,
+  ] = React.useState<ArtIndexApiWorksResult>();
   const [isLoading, setIsLoading] = React.useState(false);
   const [isOpen, setIsOpen] = React.useState(false);
 

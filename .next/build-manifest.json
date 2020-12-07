@@ -29,10 +29,25 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/art-index.js"
     ],
-    "/art-index/search": [
+    "/art-index/artist/[id]": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/art-index/search.js"
+      "static/chunks/pages/art-index/artist/[id].js"
+    ],
+    "/art-index/exhibition/[id]": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/art-index/exhibition/[id].js"
+    ],
+    "/art-index/explore": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/art-index/explore.js"
+    ],
+    "/art-index/work/[id]": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/art-index/work/[id].js"
     ]
   },
   "ampFirstPages": []
