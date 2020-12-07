@@ -1,1 +1,0 @@
-{"ast":null,"code":"export { default } from './Paginate';","map":{"version":3,"sources":["/Users/luked/Documents/slnsw/dxlab-art-index/components/Paginate/index.ts"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,YAAxB","sourcesContent":["export { default } from './Paginate';\n"]},"metadata":{},"sourceType":"module"}

@@ -1,1 +1,0 @@
-{"ast":null,"code":"export { default } from './CTALink';","map":{"version":3,"sources":["/Users/luked/Documents/slnsw/dxlab-art-index/components/CTALink/index.ts"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,WAAxB","sourcesContent":["export { default } from './CTALink';\n"]},"metadata":{},"sourceType":"module"}

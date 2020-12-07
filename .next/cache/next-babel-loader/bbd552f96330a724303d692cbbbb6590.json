@@ -1,1 +1,0 @@
-{"ast":null,"code":"export { default } from './ArtIndexArtistThumbnail';","map":{"version":3,"sources":["/Users/luked/Documents/slnsw/dxlab-art-index/components/ArtIndexArtistThumbnail/index.ts"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,2BAAxB","sourcesContent":["export { default } from './ArtIndexArtistThumbnail';\n"]},"metadata":{},"sourceType":"module"}
