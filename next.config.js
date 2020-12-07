@@ -52,8 +52,8 @@ module.exports = {
   },
   // EnvironmentPlugin stopped working for some reason
   env: {
-    DXLAB_WEBSITE_FB_APP_ID: process.env.DXLAB_WEBSITE_FB_APP_ID,
-    DXLAB_WEBSITE_GTM_ID: process.env.DXLAB_WEBSITE_GTM_ID,
+    FB_APP_ID: process.env.FB_APP_ID,
+    GTM_ID: process.env.GTM_ID,
   },
   trailingSlash: true,
 };

@@ -91,7 +91,7 @@ class App extends Component<Props> {
           imageHeight={metaImageHeight}
           baseUrl="https://dxlab.sl.nsw.gov.au"
           siteName="DX Lab | State Library of NSW"
-          fbAppId={process.env.DXLAB_WEBSITE_FB_APP_ID}
+          fbAppId={process.env.FB_APP_ID}
           twitterUsername="@statelibrarynsw"
         />
 
