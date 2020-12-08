@@ -36,21 +36,13 @@ class App extends Component<Props> {
     const {
       title,
       children,
-      // pathname,
-      // isLoading,
       metaDescription,
       metaImageUrl,
       metaImageAlt,
       metaImageWidth,
       metaImageHeight,
-      // headerMenuItems,
       className,
-      // metaUrl,
     } = this.props;
-
-    // const baseUrl =
-    //   process.env.DXLAB_WEBSITE_BASE_URL || 'https://dxlab.sl.nsw.gov.au';
-    // const metaUrl = `${baseUrl}${pathname}`;
 
     return (
       <div
