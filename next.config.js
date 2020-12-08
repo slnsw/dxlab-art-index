@@ -45,9 +45,6 @@ module.exports = {
       });
     }
 
-    console.log('GTM_ID', process.env.GTM_ID);
-    console.log('FB_APP_ID', process.env.FB_APP_ID);
-
     return customConfig;
   },
   typescript: {
