@@ -210,7 +210,7 @@ const ArtIndexHomePage = () => {
               search: '',
               formats: bubble.data.name.toLowerCase(),
             }),
-          );
+          ).then(() => window.scrollTo(0, 0));
         }}
         className={css.genderFormatBubbleChart}
       />
