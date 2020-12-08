@@ -1,4 +1,5 @@
 import React from 'react';
+import Router from 'next/router';
 import * as d3Array from 'd3-array';
 
 import Link from '../Link';
@@ -9,12 +10,25 @@ import ArtIndexStatisticBlock from '../ArtIndexStatisticBlock';
 import ArtIndexArtistThumbnail from '../ArtIndexArtistThumbnail';
 import LoaderText from '../LoaderText';
 
+import createSearchQuery from '../../lib/create-search-query';
 import axios from '../../lib/axios';
 import { arrayToCounts, processWorksByYear } from '../../lib/art-index-utils';
 import { ArtIndexArtistType } from '../../types/art-index-types';
 import { useArtIndex } from '../../lib/contexts/art-index-context';
 
 import css from './ArtIndexArtist.module.scss';
+
+type Query = {
+  search?: string;
+  formats?: string;
+  artistIds?: string;
+  exhibitionIds?: string;
+  offset?: string;
+};
+
+const searchQuery = createSearchQuery<Query>({
+  baseUrl: '/art-index/search/',
+});
 
 type Props = {
   artist?: ArtIndexArtistType;
@@ -191,7 +205,20 @@ const ArtIndexArtist: React.FC<Props> = ({ artist, className }) => {
 
         <div className={css.formats}>
           <h2>Formats</h2>
-          <ArtIndexFormatBubbleChart data={formatData} height={300} />
+          <ArtIndexFormatBubbleChart
+            data={formatData}
+            height={300}
+            onBubbleClick={(event, bubble) => {
+              event.preventDefault();
+
+              Router.push(
+                searchQuery.stringify({
+                  search: '',
+                  formats: bubble.data.name.toLowerCase(),
+                }),
+              );
+            }}
+          />
         </div>
 
         <div className={css.worksByYear}>
