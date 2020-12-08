@@ -1,4 +1,5 @@
 import React from 'react';
+import Router from 'next/router';
 import * as d3Array from 'd3-array';
 
 import Link from '../Link';
@@ -9,10 +10,23 @@ import ArtIndexStatisticBlock from '../ArtIndexStatisticBlock';
 import { arrayToCounts } from '../../lib/art-index-utils';
 import { ArtIndexExhibitionType } from '../../types/art-index-types';
 
+import createSearchQuery from '../../lib/create-search-query';
 import { useArtIndex } from '../../lib/contexts/art-index-context';
 
 import css from './ArtIndexExhibition.module.scss';
 import ArtIndexArtistThumbnail from '../ArtIndexArtistThumbnail';
+
+type Query = {
+  search?: string;
+  formats?: string;
+  artistIds?: string;
+  exhibitionIds?: string;
+  offset?: string;
+};
+
+const searchQuery = createSearchQuery<Query>({
+  baseUrl: '/art-index/search/',
+});
 
 type Props = {
   exhibition: ArtIndexExhibitionType;
@@ -91,6 +105,16 @@ const ArtIndexExhibition: React.FC<Props> = ({ exhibition, className }) => {
             data={formatData}
             height={300}
             letterWidth={3}
+            onBubbleClick={(event, bubble) => {
+              event.preventDefault();
+
+              Router.push(
+                searchQuery.stringify({
+                  search: '',
+                  formats: bubble.data.name.toLowerCase(),
+                }),
+              );
+            }}
           />
         </div>
 
