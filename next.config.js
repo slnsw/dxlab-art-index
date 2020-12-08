@@ -3,6 +3,12 @@
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
+  // dxlab-art-index is proxied to dxlab.sl.nsw.gov.au/art-index, so we need to add a prefix for _next JS files
+  ...(process.env.NODE_ENV === 'production'
+    ? {
+        assetPrefix: '/art-index',
+      }
+    : {}),
   webpack: (config, { dev }) => {
     const customConfig = {
       ...config,
