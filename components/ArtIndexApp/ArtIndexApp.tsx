@@ -12,6 +12,8 @@ import HeaderNavV2 from '../HeaderNavV2';
 import Progress from '../Progress';
 import Footer from '../Footer';
 
+import { initGA } from '../../lib/analytics';
+
 import css from './ArtIndexApp.module.scss';
 
 type Props = {
@@ -37,6 +39,13 @@ const ArtIndexApp: React.FC<Props> = ({
 }) => {
   const { pathname } = useRouter();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    if (!window.GA_INITIALIZED) {
+      initGA();
+      window.GA_INITIALIZED = true;
+    }
+  }, []);
 
   return (
     <>
