@@ -1,4 +1,4 @@
-require('dotenv').config();
+// require('dotenv').config();
 // const webpack = require('webpack');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
