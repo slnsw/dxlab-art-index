@@ -2,7 +2,7 @@
 // const webpack = require('webpack');
 // const StyleLintPlugin = require('stylelint-webpack-plugin');
 
-const basePath = '/art-index';
+const basePath = process.env.BASE_PATH || '/art-index';
 
 module.exports = {
   basePath,
