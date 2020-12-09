@@ -6,8 +6,9 @@ import {
   ArtIndexApiQuery,
   ArtIndexApiWorksResult,
   ArtIndexWorkType,
-} from '../../../types/art-index-types';
-import createFuse from '../../../lib/create-fuse';
+} from '../../types/art-index-types';
+import createFuse from '../../lib/create-fuse';
+import basePath from '../../lib/base-path';
 
 export async function getWorksResult(
   host: string,
@@ -23,7 +24,7 @@ export async function getWorksResult(
 
   // TODO: Work out https or http
   const allWorks: ArtIndexWorkType[] = await d3.csv(
-    `http://${host}/art-index/data/works.csv`,
+    `http://${host}${basePath}/data/works.csv`,
   );
 
   // Filter works

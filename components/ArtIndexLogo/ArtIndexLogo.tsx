@@ -12,7 +12,7 @@ const ArtIndexLogo: React.FC<Props> = ({ className }) => {
   return (
     <div className={[css.artIndexLogo, className || ''].join(' ')}>
       <h1>
-        <Link as="/art-index/">
+        <Link as="/">
           <a>Art Index</a>
         </Link>
       </h1>

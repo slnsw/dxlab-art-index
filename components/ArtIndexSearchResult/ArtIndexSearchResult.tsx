@@ -21,7 +21,7 @@ const ArtIndexSearchResult: React.FC<Props> = ({ item, className }) => {
       </p>
 
       <h1>
-        <Link as={`/art-index/work/${item.id}`}>
+        <Link as={`/work/${item.id}`}>
           <a>
             <TextTruncate limit={80} showButton={false}>
               {item.title}
@@ -30,13 +30,13 @@ const ArtIndexSearchResult: React.FC<Props> = ({ item, className }) => {
         </Link>
       </h1>
 
-      <Link as={`/art-index/artist/${item.artistId}`}>
+      <Link as={`/artist/${item.artistId}`}>
         <a className={css.artist}>
           <ArtIndexArtistThumbnail
             file={
               item.artistThumbnailFile || null
               // &&
-              // `/art-index/images/artists/${item.artistThumbnailFile}`
+              // `/images/artists/${item.artistThumbnailFile}`
             }
             size="xs"
             className={css.artistThumbnail}
@@ -51,8 +51,6 @@ const ArtIndexSearchResult: React.FC<Props> = ({ item, className }) => {
           ? `, ${item.exhibitionYear}`
           : ''}
       </p>
-
-      {/* <p className={css.resultExhibitionName}>ID: {item.id}</p> */}
     </article>
   );
 };

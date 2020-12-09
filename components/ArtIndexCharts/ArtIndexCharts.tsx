@@ -28,7 +28,7 @@ const ArtIndexApp: React.FC<Props> = ({
   });
 
   React.useEffect(() => {
-    fetch('/art-index/data/works-old.json')
+    fetch('/data/works-old.json')
       .then((r) => r.json())
       .then((d) => {
         setData(processData(d));

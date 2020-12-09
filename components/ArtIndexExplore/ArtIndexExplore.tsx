@@ -40,7 +40,7 @@ const ArtIndexExplore = () => {
   React.useEffect(() => {
     d3.csv(
       // '/data/australian-art-exhibition-catalogue-index-1845-1900-new.csv',
-      '/art-index/data/works.csv',
+      '/data/works.csv',
     ).then((newData) => {
       setRawData(newData);
       const loc = {
@@ -239,15 +239,15 @@ const ArtIndexExplore = () => {
 
         let link;
         if (item.title === 'artists') {
-          link = `/art-index/artist/${value[0].artistId}`;
+          link = `/artist/${value[0].artistId}`;
         } else if (item.title === 'works') {
-          link = `/art-index/work/${value[0].id}`;
+          link = `/work/${value[0].id}`;
         } else if (item.title === 'exhibitions') {
-          link = `/art-index/exhibition/${value[0].exhibitionId}`;
+          link = `/exhibition/${value[0].exhibitionId}`;
         } else if (item.title === 'format') {
-          link = `/art-index/search/?formats=${value[0].mediumFormat.toLowerCase()}`;
+          link = `/search/?formats=${value[0].mediumFormat.toLowerCase()}`;
         } else if (item.title === 'years') {
-          link = `/art-index/search/?search=${value[0].exhibitionYear}`;
+          link = `/search/?search=${value[0].exhibitionYear}`;
         }
 
         newData.push({

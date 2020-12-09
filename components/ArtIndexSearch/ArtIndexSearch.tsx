@@ -14,15 +14,16 @@ import Paginate from '../Paginate';
 import Sidebar from '../Sidebar';
 import Link from '../Link';
 import TextButton from '../TextButton';
+import Icon from '../Icon';
 
 import createSearchQuery from '../../lib/create-search-query';
 import { useAsyncReference } from '../../lib/hooks/use-async-reference';
 import axios from '../../lib/axios';
+import basePath from '../../lib/base-path';
 
 import { ArtIndexApiWorksResult } from '../../types/art-index-types';
 
 import css from './ArtIndexSearch.module.scss';
-import Icon from '../Icon';
 
 type Query = {
   search?: string;
@@ -34,11 +35,11 @@ type Query = {
 };
 
 const searchQuery = createSearchQuery<Query>({
-  baseUrl: '/art-index/search/',
+  baseUrl: `${basePath}/search/`,
 });
 
 const searchApiQuery = createSearchQuery<Query>({
-  baseUrl: '/api/art-index/works',
+  baseUrl: `${basePath}/api/works`,
 });
 
 const ArtIndexSearchPage = () => {

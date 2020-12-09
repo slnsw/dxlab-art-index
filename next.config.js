@@ -1,15 +1,15 @@
 // require('dotenv').config();
 // const webpack = require('webpack');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
+// const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
-  // basePath: '/art-index', // <-- this didn't work
+  basePath: '/art-index',
   // dxlab-art-index is proxied to dxlab.sl.nsw.gov.au/art-index, so we need to add a prefix for _next JS files
-  ...(process.env.NODE_ENV === 'production'
-    ? {
-        assetPrefix: '/art-index',
-      }
-    : {}),
+  // ...(process.env.NODE_ENV === 'production'
+  //   ? {
+  //       assetPrefix: '/art-index',
+  //     }
+  //   : {}),
   webpack: (config, { dev }) => {
     const customConfig = {
       ...config,
@@ -18,9 +18,6 @@ module.exports = {
     customConfig.plugins = config.plugins.filter(
       (plugin) => plugin.constructor.name !== 'UglifyJsPlugin',
     );
-
-    // Environment variables
-    // customConfig.plugins.push(new webpack.EnvironmentPlugin(process.env));
 
     // Next 9 introduced some pretty strict type checking
     // that breaks dev builds. It is now more relaxed,
@@ -34,15 +31,15 @@ module.exports = {
     });
 
     if (dev) {
-      customConfig.plugins.push(
-        new StyleLintPlugin({
-          configFile: './.stylelintrc.js',
-          // This creates a bunch of stylelint errors to fix - uncomment when ready...
-          // files: ['**/*.css', '**/*.scss'],
-          files: ['**/*.css'],
-          emitErrors: false,
-        }),
-      );
+      // customConfig.plugins.push(
+      //   new StyleLintPlugin({
+      //     configFile: './.stylelintrc.js',
+      //     // This creates a bunch of stylelint errors to fix - uncomment when ready...
+      //     // files: ['**/*.css', '**/*.scss'],
+      //     files: ['**/*.css'],
+      //     emitErrors: false,
+      //   }),
+      // );
 
       customConfig.module.rules.push({
         enforce: 'pre',

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import basePath from '../../lib/base-path';
+
 import css from './SLNSWLogo.module.scss';
 
 const SLNSWLogo = ({ className, onClick }) => {
@@ -12,7 +14,10 @@ const SLNSWLogo = ({ className, onClick }) => {
         rel="noopener noreferrer"
         onClick={onClick}
       >
-        <img src="/images/logo-slnsw-white.png" alt="State Library Logo." />
+        <img
+          src={`${basePath}/images/logo-slnsw-white.png`}
+          alt="State Library Logo."
+        />
       </a>
     </div>
   );
