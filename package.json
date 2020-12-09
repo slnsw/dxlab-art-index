@@ -12,7 +12,7 @@
     "start": "next start",
     "build": "NODE_ENV=production next build",
     "test": "jest",
-    "test:watch": "jest --watch",
+    "test:watch": "BASE_PATH=/art-index jest --watch",
     "test:lint": "eslint . --ext .js --ext .jsx --ignore-path .gitignore --ignore-pattern dist --cache",
     "precommit": "lint-staged"
   },

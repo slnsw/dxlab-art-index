@@ -10,7 +10,9 @@ import { getWorkDetail } from '../../../pages/api/works/[id]';
 import { getArtistDetail } from '../../../pages/api/artists/[id]';
 import { getExhibitionDetail } from '../../../pages/api/exhibitions/[id]';
 
-const host = 'localhost:5010';
+// Ensure website is running before running tests!!!!
+// npm run dev
+const host = 'localhost:5070';
 
 describe('Art Index API', () => {
   describe('Work Search', () => {
