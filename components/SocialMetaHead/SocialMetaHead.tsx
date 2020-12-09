@@ -37,7 +37,9 @@ const SocialMetaHead: React.FC<Props> = ({
   twitterUsername,
 }) => {
   const router = useRouter();
-  const url = `${baseUrl || ''}${router && router.asPath}`;
+  const url = `${baseUrl || ''}${router && router.basePath}${
+    router && router.asPath
+  }`;
   const truncatedTitle = truncate(title);
   const truncatedDescription = truncate(description);
   const truncatedImageAlt = truncate(imageAlt);

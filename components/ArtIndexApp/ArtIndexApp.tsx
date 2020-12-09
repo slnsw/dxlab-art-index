@@ -69,7 +69,10 @@ const ArtIndexApp: React.FC<Props> = ({
       >
         <header className={css.header}>
           <div className={css.headerLogos}>
-            <DXLabLogo className={css.dxLogo} />
+            <DXLabLogo
+              className={css.dxLogo}
+              href={'https://dxlab.sl.nsw.gov.au'}
+            />
             <div className={css.logoDivider}></div>
             <ArtIndexLogo />
           </div>
