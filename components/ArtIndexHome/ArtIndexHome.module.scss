@@ -139,6 +139,12 @@
   }
 }
 
+.safariOverride {
+  @include media-sm {
+    background-attachment: scroll;
+  }
+}
+
 .sectionMastheadOverlay {
   position: absolute;
   width: 100%;

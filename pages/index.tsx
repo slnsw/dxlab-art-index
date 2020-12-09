@@ -135,7 +135,7 @@ const ArtIndexPage: NextPage<Props> = ({
     metaImageWidth = 1200;
     metaImageHeight = 627;
   }
-  console.log(metaImageUrl);
+
   return (
     <ArtIndexProvider>
       <ArtIndexApp

@@ -1,5 +1,6 @@
 import React from 'react';
 import Router from 'next/router';
+import { isSafari } from 'react-device-detect';
 
 import ArtIndexHomeMasthead from '../ArtIndexHomeMasthead';
 import BarChart from '../BarChart';
@@ -221,7 +222,11 @@ const ArtIndexHomePage = () => {
       {/* ------------------------------------------------------------- */}
 
       <div
-        className={[css.sectionMasthead, css.fullBleed].join(' ')}
+        className={[
+          css.sectionMasthead,
+          css.fullBleed,
+          isSafari ? css.safariOverride : '',
+        ].join(' ')}
         style={{
           backgroundImage: `url('${basePath}/images/works/martens-port-jackson-673.jpg')`,
         }}
@@ -373,7 +378,11 @@ const ArtIndexHomePage = () => {
       </div>
 
       <div
-        className={[css.sectionMasthead, css.fullBleed].join(' ')}
+        className={[
+          css.sectionMasthead,
+          css.fullBleed,
+          isSafari ? css.safariOverride : '',
+        ].join(' ')}
         style={{
           backgroundImage: `url('${basePath}/images/works/martens-abercrombie-caves-14969.jpg')`,
         }}

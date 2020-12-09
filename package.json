@@ -39,6 +39,7 @@
     "prop-types": "^15.7.2",
     "query-string": "^6.13.6",
     "react": "^16.13.1",
+    "react-device-detect": "^1.14.0",
     "react-dom": "^16.13.1",
     "react-gtm-module": "^2.0.8",
     "react-paginate": "^6.5.0",
