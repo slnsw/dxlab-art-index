@@ -1,4 +1,4 @@
-import { basePath as oldBasePath } from '../next.config';
+const oldBasePath = process.env.BASE_PATH;
 
 const basePath = !oldBasePath || oldBasePath === '/' ? '' : oldBasePath;
 

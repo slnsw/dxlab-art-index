@@ -2,8 +2,10 @@
 // const webpack = require('webpack');
 // const StyleLintPlugin = require('stylelint-webpack-plugin');
 
+const basePath = '/art-index';
+
 module.exports = {
-  basePath: '/art-index',
+  basePath,
   // dxlab-art-index is proxied to dxlab.sl.nsw.gov.au/art-index, so we need to add a prefix for _next JS files
   // ...(process.env.NODE_ENV === 'production'
   //   ? {
@@ -58,6 +60,7 @@ module.exports = {
   env: {
     FB_APP_ID: process.env.FB_APP_ID,
     GTM_ID: process.env.GTM_ID,
+    BASE_PATH: basePath,
   },
   trailingSlash: true,
 };

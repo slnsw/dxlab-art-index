@@ -223,7 +223,7 @@ const ArtIndexHomePage = () => {
       <div
         className={[css.sectionMasthead, css.fullBleed].join(' ')}
         style={{
-          backgroundImage: "url('/images/works/martens-port-jackson-673.jpg')",
+          backgroundImage: `url('${basePath}/images/works/martens-port-jackson-673.jpg')`,
         }}
       >
         <div className={css.sectionMastheadOverlay}></div>
@@ -375,8 +375,7 @@ const ArtIndexHomePage = () => {
       <div
         className={[css.sectionMasthead, css.fullBleed].join(' ')}
         style={{
-          backgroundImage:
-            "url('/images/works/martens-abercrombie-caves-14969.jpg')",
+          backgroundImage: `url('${basePath}/images/works/martens-abercrombie-caves-14969.jpg')`,
         }}
       >
         <div className={css.sectionMastheadOverlay}></div>
