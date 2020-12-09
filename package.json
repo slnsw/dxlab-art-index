@@ -11,7 +11,7 @@
     "dev": "next dev -p 5070",
     "start": "next start",
     "build": "NODE_ENV=production next build",
-    "test": "jest",
+    "test": "BASE_PATH=/art-index jest",
     "test:watch": "BASE_PATH=/art-index jest --watch",
     "test:lint": "eslint . --ext .js --ext .jsx --ignore-path .gitignore --ignore-pattern dist --cache",
     "precommit": "lint-staged"
