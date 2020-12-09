@@ -1,8 +1,6 @@
 import { Component } from 'react';
-// import PropTypes from 'prop-types';
 
-// import './Footer.css';
-// import Menu from '../Menu';
+import ArtIndexImage from '../ArtIndexImage';
 
 class Footer extends Component {
   render() {
@@ -46,7 +44,7 @@ class Footer extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
+            <ArtIndexImage
               className=""
               src="/images/logo-nsw-white.png"
               alt="NSW Government logo."

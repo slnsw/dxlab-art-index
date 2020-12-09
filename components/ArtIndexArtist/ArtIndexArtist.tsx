@@ -27,7 +27,7 @@ type Query = {
 };
 
 const searchQuery = createSearchQuery<Query>({
-  baseUrl: '/art-index/search/',
+  baseUrl: '/search/',
 });
 
 type Props = {
@@ -115,8 +115,6 @@ const ArtIndexArtist: React.FC<Props> = ({ artist, className }) => {
       };
     });
 
-  console.log(wikiData);
-
   return (
     <article className={[css.artIndexArtist, className || ''].join(' ')}>
       <header className={css.header}>
@@ -145,7 +143,7 @@ const ArtIndexArtist: React.FC<Props> = ({ artist, className }) => {
           <ArtIndexStatisticBlock
             count={artistWorks.length}
             label="Works"
-            url={`/art-index/search/?artistIds=${artist.id}`}
+            url={`/search/?artistIds=${artist.id}`}
           />
           <ArtIndexStatisticBlock
             count={exhibitions.length}
@@ -166,9 +164,7 @@ const ArtIndexArtist: React.FC<Props> = ({ artist, className }) => {
                   : {}),
               }}
             ></div>{' '}
-            <Link
-              as={`/art-index/search/?genders=${artist.gender || 'unknown'}`}
-            >
+            <Link as={`/search/?genders=${artist.gender || 'unknown'}`}>
               <a>{artist.gender || 'Unknown'}</a>
             </Link>
           </p>
@@ -265,7 +261,7 @@ const ArtIndexArtist: React.FC<Props> = ({ artist, className }) => {
                           key={exhibitionId}
                         >
                           <h3>
-                            <Link as={`/art-index/exhibition/${exhibitionId}`}>
+                            <Link as={`/exhibition/${exhibitionId}`}>
                               <a>{exhibition.title}</a>
                             </Link>
                           </h3>
@@ -575,7 +571,7 @@ const TimelineWorks = ({ works = [], limit = 5 }) => {
       {works.slice(0, newLimit).map((work) => {
         return (
           <h4 key={work.id}>
-            <Link as={`/art-index/work/${work.id}`}>
+            <Link as={`/work/${work.id}`}>
               <a>{work.title}</a>
             </Link>
             <span className={css.timelineWorkFormat}>

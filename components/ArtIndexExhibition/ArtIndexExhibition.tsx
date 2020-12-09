@@ -25,7 +25,7 @@ type Query = {
 };
 
 const searchQuery = createSearchQuery<Query>({
-  baseUrl: '/art-index/search/',
+  baseUrl: '/search/',
 });
 
 type Props = {
@@ -91,7 +91,7 @@ const ArtIndexExhibition: React.FC<Props> = ({ exhibition, className }) => {
           <ArtIndexStatisticBlock
             count={exhibition.worksTotal}
             label="Works"
-            url={`/art-index/search/?exhibitionIds=${exhibition.id}`}
+            url={`/search/?exhibitionIds=${exhibition.id}`}
           />
           <ArtIndexStatisticBlock
             count={exhibitionArtists.length}
@@ -152,7 +152,7 @@ const ArtIndexExhibition: React.FC<Props> = ({ exhibition, className }) => {
               {artistName === 'Artist unknown' ? (
                 artistName
               ) : (
-                <Link as={`/art-index/artist/${id}`}>
+                <Link as={`/artist/${id}`}>
                   <a className={css.artistLink}>
                     <ArtIndexArtistThumbnail
                       file={artistThumbnailUrl}
@@ -169,7 +169,7 @@ const ArtIndexExhibition: React.FC<Props> = ({ exhibition, className }) => {
               {artistWorks.map((artistWork) => {
                 return (
                   <li key={artistWork.id}>
-                    <Link as={`/art-index/work/${artistWork.id}`}>
+                    <Link as={`/work/${artistWork.id}`}>
                       <a className={css.artistWork}>{artistWork.title}</a>
                     </Link>
                     {artistWork.mediumFormat && (

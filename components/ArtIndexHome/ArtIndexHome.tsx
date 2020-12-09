@@ -14,13 +14,14 @@ import ArtIndexGenderFormatDonutCharts from '../ArtIndexGenderFormatDonutCharts'
 import Link from '../Link';
 import CTALink from '../CTALink';
 import ArtIndexGenderLegend from '../ArtIndexGenderLegend';
+import LoaderText from '../LoaderText';
 
 import createSearchQuery from '../../lib/create-search-query';
 import { useArtIndex } from '../../lib/contexts/art-index-context';
 import { getGenderColour } from '../../lib/art-index-utils';
+import basePath from '../../lib/base-path';
 
 import css from './ArtIndexHome.module.scss';
-import LoaderText from '../LoaderText';
 
 type Query = {
   search?: string;
@@ -31,7 +32,7 @@ type Query = {
 };
 
 const searchQuery = createSearchQuery<Query>({
-  baseUrl: '/art-index/search/',
+  baseUrl: '/search/',
 });
 
 const ArtIndexHomePage = () => {
@@ -122,11 +123,11 @@ const ArtIndexHomePage = () => {
       <p className={css.paragraph}>
         All this can be experienced through <strong>data visualisation</strong>,
         a{' '}
-        <Link as="/art-index/search/">
+        <Link as="/search/">
           <a>search interface</a>
         </Link>{' '}
         and connection{' '}
-        <Link as="/art-index/explore/">
+        <Link as="/explore/">
           <a>explorer</a>
         </Link>
         .
@@ -183,16 +184,16 @@ const ArtIndexHomePage = () => {
       <h2>Formats</h2>
 
       <p className={css.paragraph}>
-        <Link as="/art-index/search/?formats=painting">
+        <Link as="/search/?formats=painting">
           <a>Paintings</a>
         </Link>{' '}
         were the most common format of the time, followed by other formats such
         as{' '}
-        <Link as="/art-index/search/?formats=photograph">
+        <Link as="/search/?formats=photograph">
           <a>photography</a>
         </Link>{' '}
         and{' '}
-        <Link as="/art-index/search/?formats=sculpture">
+        <Link as="/search/?formats=sculpture">
           <a>sculpture</a>
         </Link>
         . Click on a circle below to start a search based on that format.
@@ -222,14 +223,13 @@ const ArtIndexHomePage = () => {
       <div
         className={[css.sectionMasthead, css.fullBleed].join(' ')}
         style={{
-          backgroundImage:
-            "url('/art-index/images/works/martens-port-jackson-673.jpg')",
+          backgroundImage: `url('${basePath}/images/works/martens-port-jackson-673.jpg')`,
         }}
       >
         <div className={css.sectionMastheadOverlay}></div>
         <h2>Gender</h2>
         <p>How do female and male artists compare?</p>
-        <Link as="/art-index/work/673/">
+        <Link as="/work/673/">
           <a
             title="Entrance to Port Jackson by Conrad Martens"
             className={css.imageCredit}
@@ -275,19 +275,19 @@ const ArtIndexHomePage = () => {
       <p className={css.paragraph}>
         Here is a selection of formats showing the breakdown of works by gender.
         Formats such as{' '}
-        <Link as="/art-index/search/?formats=china painting">
+        <Link as="/search/?formats=china painting">
           <a>china paintings</a>
         </Link>{' '}
         and{' '}
-        <Link as="/art-index/search/?formats=wax medallion">
+        <Link as="/search/?formats=wax medallion">
           <a>wax medallions</a>
         </Link>{' '}
         were more popular with women, while{' '}
-        <Link as="/art-index/search/?formats=architectural drawing">
+        <Link as="/search/?formats=architectural drawing">
           <a>architectural drawings</a>
         </Link>{' '}
         and{' '}
-        <Link as="/art-index/search/?formats=photographs">
+        <Link as="/search/?formats=photographs">
           <a>photographs</a>
         </Link>{' '}
         leaned heavily towards men.
@@ -358,7 +358,7 @@ const ArtIndexHomePage = () => {
           accurate, it was both scalable and realistic due to the majority of
           artists having typical <strong>European</strong> names (interestingly,
           only one artist with a non-European name was found{'—'}
-          <Link as="/art-index/artist/578/">
+          <Link as="/artist/578/">
             <a>Pang Cheah Yeng Chun</a>
           </Link>
           )
@@ -375,8 +375,7 @@ const ArtIndexHomePage = () => {
       <div
         className={[css.sectionMasthead, css.fullBleed].join(' ')}
         style={{
-          backgroundImage:
-            "url('/art-index/images/works/martens-abercrombie-caves-14969.jpg')",
+          backgroundImage: `url('${basePath}/images/works/martens-abercrombie-caves-14969.jpg')`,
         }}
       >
         <div className={css.sectionMastheadOverlay}></div>
@@ -384,15 +383,15 @@ const ArtIndexHomePage = () => {
           Find works, artists and exhibitions:
           <br />
           <br />
-          <CTALink href="/art-index/search/">Search</CTALink>
+          <CTALink href="/search/">Search</CTALink>
         </p>
         <p>
           Explore the data and connections:
           <br />
           <br />
-          <CTALink href="/art-index/explore/">Explore</CTALink>
+          <CTALink href="/explore/">Explore</CTALink>
         </p>
-        <Link as="/art-index/work/14969/">
+        <Link as="/work/14969/">
           <a title="Abercrombie Caves by Conrad Martens">
             <div className={css.imageCredit}>
               <em>Abercrombie Caves</em> by Conrad Martens

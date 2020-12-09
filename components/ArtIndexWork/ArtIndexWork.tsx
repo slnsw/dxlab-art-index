@@ -1,7 +1,9 @@
 import React from 'react';
+
 import { ArtIndexWorkType } from '../../types/art-index-types';
 import Link from '../Link';
 import ArtIndexArtistThumbnail from '../ArtIndexArtistThumbnail';
+
 import css from './ArtIndexWork.module.scss';
 
 type Props = {
@@ -42,7 +44,7 @@ const ArtIndexWork: React.FC<Props> = ({ work, className }) => {
         <div>
           <p className={css.label}>Artist</p>
           <p className={css.artistName}>
-            <Link as={`/art-index/artist/${work.artistId}`}>
+            <Link as={`/artist/${work.artistId}`}>
               <a>
                 {work.artistFirstName} {work.artistLastName}
               </a>
@@ -55,7 +57,7 @@ const ArtIndexWork: React.FC<Props> = ({ work, className }) => {
       )}
       <p className={css.label}>Exhibition</p>
       <p>
-        <Link as={`/art-index/exhibition/${work.exhibitionId}`}>
+        <Link as={`/exhibition/${work.exhibitionId}`}>
           <a>{work.exhibitionName}</a>
         </Link>
       </p>

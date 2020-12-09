@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ArtIndexImage from '../ArtIndexImage';
+
 import css from './ArtIndexArtistThumbnail.module.scss';
 
 type Props = {
@@ -25,10 +27,10 @@ const ArtIndexArtistThumbnail: React.FC<Props> = ({
       ].join(' ')}
     >
       {file && (
-        <img
+        <ArtIndexImage
           alt={alt}
           className={css.image}
-          src={`/art-index/images/artists/${file}`}
+          src={`/images/artists/${file}`}
         />
       )}
     </span>

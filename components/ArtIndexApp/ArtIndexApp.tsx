@@ -85,9 +85,7 @@ const ArtIndexApp: React.FC<Props> = ({
                 { name: 'Search', slug: 'search' },
                 { name: 'Explore', slug: 'explore' },
               ].map((item) => {
-                const itemPathname = `/art-index${
-                  item.slug ? `/${item.slug}` : ''
-                }`;
+                const itemPathname = `${item.slug ? `/${item.slug}` : '/'}`;
                 const isActive = pathname === itemPathname;
 
                 return (
@@ -95,7 +93,7 @@ const ArtIndexApp: React.FC<Props> = ({
                     className={[isActive ? css.menuItemActive : ''].join(' ')}
                     key={item.slug}
                   >
-                    <Link as={`/art-index/${item.slug}`}>
+                    <Link as={`/${item.slug}`}>
                       <a
                         onClick={() => {
                           setIsMenuOpen(false);

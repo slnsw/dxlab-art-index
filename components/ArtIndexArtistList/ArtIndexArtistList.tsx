@@ -1,7 +1,9 @@
 import React from 'react';
 
-import { useArtIndex } from '../../lib/contexts/art-index-context';
+import ArtIndexImage from '../ArtIndexImage';
 import Link from '../Link';
+
+import { useArtIndex } from '../../lib/contexts/art-index-context';
 
 import css from './ArtIndexArtistList.module.scss';
 
@@ -25,13 +27,13 @@ const ArtIndexArtistList: React.FC<Props> = ({ className }) => {
         .map((artist) => {
           return (
             <div className={css.artist} key={artist.id}>
-              <Link as={`/art-index/artist/${artist.id}`}>
+              <Link as={`/artist/${artist.id}`}>
                 <a>
-                  <img
+                  <ArtIndexImage
                     alt={`${artist.firstName} ${artist.lastName} (${artist.worksTotal} works)`}
                     title={`${artist.firstName} ${artist.lastName} (${artist.worksTotal} works)`}
                     className={css.artistImage}
-                    src={`/art-index/images/artists/${artist.thumbnailFile}`}
+                    src={`/images/artists/${artist.thumbnailFile}`}
                   />
                 </a>
               </Link>

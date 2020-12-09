@@ -1,10 +1,11 @@
 import * as d3 from 'd3';
 import { NextApiRequest, NextApiResponse } from 'next';
+import basePath from '../../../lib/base-path';
 
 import {
   // ArtIndexApiQuery,
   ArtIndexExhibitionType,
-} from '../../../../types/art-index-types';
+} from '../../../types/art-index-types';
 
 export async function getExhibitionDetail(
   host: string,
@@ -12,7 +13,7 @@ export async function getExhibitionDetail(
 ): Promise<ArtIndexExhibitionType> {
   // TODO: Work out https or http
   const allExhibitions: ArtIndexExhibitionType[] = await d3.csv(
-    `http://${host}/art-index/data/exhibitions.csv`,
+    `http://${host}${basePath}/data/exhibitions.csv`,
   );
 
   const exhibition = allExhibitions.find((e) => e.id === id);

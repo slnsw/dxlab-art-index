@@ -5,10 +5,10 @@ import {
   ArtIndexExhibitionType,
 } from '../../../types/art-index-types';
 
-import { getWorksResult } from '../../../pages/api/art-index/works';
-import { getWorkDetail } from '../../../pages/api/art-index/works/[id]';
-import { getArtistDetail } from '../../../pages/api/art-index/artists/[id]';
-import { getExhibitionDetail } from '../../../pages/api/art-index/exhibitions/[id]';
+import { getWorksResult } from '../../../pages/api/works';
+import { getWorkDetail } from '../../../pages/api/works/[id]';
+import { getArtistDetail } from '../../../pages/api/artists/[id]';
+import { getExhibitionDetail } from '../../../pages/api/exhibitions/[id]';
 
 const host = 'localhost:5010';
 

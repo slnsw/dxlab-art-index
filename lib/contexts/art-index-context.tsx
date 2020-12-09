@@ -9,6 +9,8 @@ import {
   processPriceData,
   processWorksByYear,
 } from '../art-index-utils';
+import basePath from '../base-path';
+
 import {
   ArtIndexArtistType,
   ArtIndexWorkType,
@@ -150,14 +152,14 @@ function useArtIndex() {
   // Data Fetching
   // --------------------------------------------------------------------------
   React.useEffect(() => {
-    d3.csv('/art-index/data/artists.csv').then((artists) => {
+    d3.csv(`${basePath}/data/artists.csv`).then((artists) => {
       dispatch({
         type: 'FETCH_ARTISTS',
         payload: artists,
       });
     });
 
-    d3.csv('/art-index/data/works.csv').then((works) => {
+    d3.csv(`${basePath}/data/works.csv`).then((works) => {
       dispatch({
         type: 'FETCH_WORKS',
         payload: works,

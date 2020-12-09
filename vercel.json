@@ -20,11 +20,5 @@
         }
       ]
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/art-index/_next/(.*)",
-      "destination": "/_next/$1"
-    }
   ]
 }
