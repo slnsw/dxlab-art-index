@@ -17,7 +17,7 @@ const ArtIndexGenderLegend: React.FC<Props> = ({
     <div className={[css.artIndexGenderLegend, className || ''].join(' ')}>
       {['female', 'male'].map((name) => {
         return (
-          <div className={css.legendItem}>
+          <div className={css.legendItem} key={name}>
             <div
               className={css.legendLine}
               style={{
