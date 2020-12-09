@@ -2,6 +2,7 @@ import React from 'react';
 import * as d3 from 'd3';
 import * as d3Array from 'd3-array';
 
+import basePath from '../../lib/base-path';
 import Link from '../Link';
 import HierarchyColumnBrowser from '../HierarchyColumnBrowser';
 import Icon from '../Icon';
@@ -38,10 +39,7 @@ const ArtIndexExplore = () => {
   };
 
   React.useEffect(() => {
-    d3.csv(
-      // '/data/australian-art-exhibition-catalogue-index-1845-1900-new.csv',
-      '/data/works.csv',
-    ).then((newData) => {
+    d3.csv(`${basePath}/data/works.csv`).then((newData) => {
       setRawData(newData);
       const loc = {
         type: 'chooser',
