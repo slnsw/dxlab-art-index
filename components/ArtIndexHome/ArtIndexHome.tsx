@@ -32,7 +32,7 @@ type Query = {
 };
 
 const searchQuery = createSearchQuery<Query>({
-  baseUrl: `${basePath}/search/`,
+  baseUrl: '/search/',
 });
 
 const ArtIndexHomePage = () => {
@@ -211,7 +211,7 @@ const ArtIndexHomePage = () => {
               search: '',
               formats: bubble.data.name.toLowerCase(),
             }),
-          );
+          ).then(() => window.scrollTo(0, 0));
         }}
         className={css.genderFormatBubbleChart}
       />
