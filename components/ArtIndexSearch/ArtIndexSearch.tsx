@@ -35,7 +35,7 @@ type Query = {
 };
 
 const searchQuery = createSearchQuery<Query>({
-  baseUrl: `${basePath}/search/`,
+  baseUrl: `/search/`,
 });
 
 const searchApiQuery = createSearchQuery<Query>({
