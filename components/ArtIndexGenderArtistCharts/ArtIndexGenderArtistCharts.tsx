@@ -75,7 +75,7 @@ const ArtIndexGenderArtistCharts: React.FC<Props> = ({ className }) => {
       >
         <p className={css.paragraph}>
           The artists above are ranked by how many artworks they exhibited, with{' '}
-          <Link as="/artists/2734/">
+          <Link as="/artist/2734/">
             <a>Marian Ellis Rowan</a>
           </Link>
           , a well-known Australian artist and botanical illustrator listed as
