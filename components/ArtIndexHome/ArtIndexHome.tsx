@@ -101,7 +101,7 @@ const ArtIndexHomePage = () => {
         <a href="https://dxlab.sl.nsw.gov.au">DX Lab</a>, is powered by data
         from the{' '}
         <a href="https://collection.sl.nsw.gov.au/record/9PQWVlNn">
-          Australian Art Exhibition Catalogue Index, 1845—1900
+          Australian Art Exhibition Catalogue Index, 1847—1900
         </a>
         . This index was compiled by{' '}
         <strong>State Library of New South Wales</strong> volunteers between
@@ -142,7 +142,7 @@ const ArtIndexHomePage = () => {
 
       <p className={css.paragraph}>
         The <strong>{works.length.toLocaleString()}</strong> artworks were
-        exhibited between 1845—1900. The chart below shows a steady increase of
+        exhibited between 1847—1900. The chart below shows a steady increase of
         artworks, revealing a peak in <strong>1893</strong>, potentially due to
         the downturn from the economic depression that followed.
       </p>
@@ -412,14 +412,27 @@ const ArtIndexHomePage = () => {
       <div className={css.methodology}>
         <h2>Dedicated to Berry Symons</h2>
         <p className={css.paragraph}>
-          This index was initiated by Library volunteer,{' '}
-          <strong>Berry Symons</strong>, in 1989. When Berry began this project,
-          entries were recorded on catalogue cards. Berry persisted with the
-          index until her death in 2005. Other Library volunteers since then
-          have contributed to continuing her work and transferred her cards to
-          this online database. This index is dedicated to Berry, and to the
-          hard work of the many volunteers whom have ensured that the index was
-          completed.
+          The Art Index was initiated in 1989 by State Library of NSW volunteer{' '}
+          <strong>Berry Symons</strong>.
+          <br />
+          <br />
+          Berry, an architect and librarian before joining the Library as a
+          volunteer, was asked by the Library to create an index for 19th
+          century Australian art exhibition catalogues, to unlock the valuable
+          but largely impenetrable information recorded within them. From an
+          initially modest selection, the project expanded to 145 catalogues of
+          exhibitions from across Australia.
+          <br />
+          <br />
+          Berry recorded not only artists but also photographers, sculptors and
+          craftworkers. She also recorded all the incidental detail in the
+          catalogues such as owners, awards and prices. At first Berry wrote
+          these entries onto catalogue cards, but from 2003 other Library
+          volunteers began to transcribe her cards into a database.
+          <br />
+          <br />
+          Sadly Berry passed away in 2005 but volunteers continued both
+          transcribing and indexing until its conclusion in the mid 2010s.
         </p>
       </div>
     </div>

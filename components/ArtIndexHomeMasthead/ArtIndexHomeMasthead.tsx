@@ -42,7 +42,7 @@ const ArtIndexHomeMasthead: React.FC<Props> = ({ className }) => {
       <div className={[css.imageHolder, css.imageHolder3].join(' ')}>
         <div className={css.titleHolder}>
           <h1 className={[css.title].join(' ')}>Index</h1>
-          <p className={css.subtitle}>1845–1900</p>
+          <p className={css.subtitle}>1847–1900</p>
         </div>
 
         <Link as="/work/9256/">
