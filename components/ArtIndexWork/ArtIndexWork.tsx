@@ -26,7 +26,7 @@ const ArtIndexWork: React.FC<Props> = ({ work, className }) => {
     const pence = allPence - shillings * 12;
     return `£${pounds} ${shillings}s ${pence}d`;
   };
-
+  console.log(work);
   return (
     <div className={[css.artIndexWork, className || ''].join(' ')}>
       <p className={css.mediumFormat}>
@@ -62,7 +62,7 @@ const ArtIndexWork: React.FC<Props> = ({ work, className }) => {
         </Link>
       </p>
       <p className={css.label}>Catalogue</p>
-      <p>{work.source}</p>
+      <p>{work.catalogueName.replaceAll('â€¦', '...')}</p>
       <p className={css.label}>Year</p>
       <p>{work.exhibitionYear}</p>
       {work.notes && !work.notes.includes('£') && (
