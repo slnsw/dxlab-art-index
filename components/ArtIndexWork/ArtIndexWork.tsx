@@ -26,7 +26,7 @@ const ArtIndexWork: React.FC<Props> = ({ work, className }) => {
     const pence = allPence - shillings * 12;
     return `£${pounds} ${shillings}s ${pence}d`;
   };
-  console.log(work);
+
   return (
     <div className={[css.artIndexWork, className || ''].join(' ')}>
       <p className={css.mediumFormat}>
