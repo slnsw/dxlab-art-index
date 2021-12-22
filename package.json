@@ -8,16 +8,16 @@
   ],
   "version": "0.2.6",
   "scripts": {
-    "dev": "next dev -p 5070",
+    "dev": "cross-env BASE_PATH=/art-index next dev -p 5070",
     "start": "next start",
-    "build": "NODE_ENV=production next build",
-    "test": "BASE_PATH=/art-index jest",
-    "test:watch": "BASE_PATH=/art-index jest --watch",
+    "build": "cross-env NODE_ENV=production next build",
+    "test": "cross-env BASE_PATH=/art-index jest",
+    "test:watch": "cross-env BASE_PATH=/art-index jest --watch",
     "test:lint": "eslint . --ext .js --ext .jsx --ignore-path .gitignore --ignore-pattern dist --cache",
     "precommit": "lint-staged"
   },
   "engines": {
-    "node": "~10.16.3"
+    "node": "14.x"
   },
   "repository": {
     "type": "git",
@@ -57,6 +57,7 @@
     "@types/react": "^16.9.19",
     "@typescript-eslint/eslint-plugin": "^2.19.2",
     "@typescript-eslint/parser": "^2.19.2",
+    "cross-env": "^7.0.3",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.10.0",
