@@ -17,7 +17,7 @@
     "precommit": "lint-staged"
   },
   "engines": {
-    "node": "14.x"
+    "node": "18.x"
   },
   "repository": {
     "type": "git",
