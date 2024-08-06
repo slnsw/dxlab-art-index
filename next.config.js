@@ -1,3 +1,5 @@
+require('./webpack-monkeypatch.js');
+
 // require('dotenv').config();
 // const webpack = require('webpack');
 // const StyleLintPlugin = require('stylelint-webpack-plugin');
