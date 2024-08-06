@@ -62,7 +62,7 @@ const ArtIndexWork: React.FC<Props> = ({ work, className }) => {
         </Link>
       </p>
       <p className={css.label}>Catalogue</p>
-      <p>{work.catalogueName.replaceAll('â€¦', '...')}</p>
+      <p>{(work.catalogueName || '').replaceAll('â€¦', '...')}</p>
       <p className={css.label}>Year</p>
       <p>{work.exhibitionYear}</p>
       {work.notes && !work.notes.includes('£') && (
