@@ -3,7 +3,7 @@ id,firstName,lastName,worksTotal,gender,image,imageUrl,wikipediaUrl,notes,thumbn
 2734,Marian Ellis,Rowan,174,female,,https://www.nla.gov.au/sites/default/files/blogs/national_library_of_australia_nla.obj-134351633_800x12001_2.jpg,https://en.wikipedia.org/wiki/Ellis_Rowan,https://www.nla.gov.au/content/ellis-rowan-artist-and-naturalist. SL Collection search: https://collection.sl.nsw.gov.au/search?offset=0&authorIds=dYzRlXkpMjlZ. SL Digital search https://collection.sl.nsw.gov.au/digital/search?groupResultsByItem=true&offset=0&authorIds=Yp5nJ4RdqyJW,2734.jpg,Q5365986
 301,Conrad,Martens,171,male,,https://files02.sl.nsw.gov.au/fotoweb/thumbnails/300_300/3140/31409221.jpg,https://en.wikipedia.org/wiki/Conrad_Martens,https://collection.sl.nsw.gov.au/record/9gkdazm9. SL Collection search: https://collection.sl.nsw.gov.au/search?offset=0&authorIds=Y0ADqqPlmL011. SL Digital search: https://collection.sl.nsw.gov.au/digital/search?groupResultsByItem=true&offset=0&authorIds=Qy9Aaa4Wkdy33,301.jpg,Q1126926
 2069,Arthur,Collingridge de Tourcey,166,male,,https://files02.sl.nsw.gov.au/fotoweb/thumbnails/300_300/9299/92999801.jpg,,Self portrait: https://collection.sl.nsw.gov.au/digital/VRGbVqdW8XmxJ. SL Collection search: https://collection.sl.nsw.gov.au/search?authorIds=pNyk6bbDNkOPA. SL Digital search: https://collection.sl.nsw.gov.au/digital/search?groupResultsByItem=true&authorIds=pZ50WDDKZ0Xod,2069.jpg,
-2912,,Unknown,4050,,,,,,,
+2912,,Unknown,4052,,,,,,,
 1385,James,Mather,135,male,,,,,,
 2318,Albert J,Hanson,128,male,,,,,,Q4710535
 1039,Alfred James,Daplyn,120,male,,,,,,Q4722938
@@ -1284,7 +1284,6 @@ Swyer and Davies",2,,,,,,,
 1540,William,Reay,2,male,,,,,,
 2568,Rev. A,Morison,2,,,,,,,
 2327,John,Harrison,2,male,,,,,,
-1670,Emma von,Stieglitz,2,female,,,,,,
 2572,Andrew,Morton,2,male,,,,,,
 946,Richard,Buckner,2,male,,,,,,
 2128,Aquila John,Davis,2,male,,,,,,
